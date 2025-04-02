@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Survey Questions</h2>
+		
+		<!-- ✅ Email Consent Section -->
+		<div class="email-checkbox">
+		    <label for="include-email">Do you want to submit the response with this email?</label>
+		    <div class="checkbox-container">
+		        <input type="checkbox" id="include-email" checked>
+		        <span id="user-email">Loading...</span>
+		    </div>
+		</div>
+
+
+		
+		
+        <div id="questions-container">
+            <p>Loading questions...</p>
+        </div>
+        <button id="submit-survey-btn">Submit Survey</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
