@@ -123,7 +123,7 @@ function fetchQuestions(constituencyId) {
         return;
     }
 
-    fetch(`http://form.jpran.in//api/questions/${constituencyId}`, {
+    fetch(`http://form.jpran.in/api/questions/${constituencyId}`, {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${token}`,
@@ -196,6 +196,8 @@ function displayQuestions(questions) {
 
 
 
+
+
 // ⬇️ Function to Handle Login
 async function login(event) {
     event.preventDefault();
@@ -204,7 +206,7 @@ async function login(event) {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const response = await fetch("http://form.jpran.in//auth/login", {
+    const response = await fetch("http://form.jpran.in/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password })
@@ -227,6 +229,7 @@ async function login(event) {
         alert("Invalid email or password");
     }
 }
+
 // ⬇️ Function to Handle Signup
 async function signup(event) {
     event.preventDefault();
@@ -435,7 +438,7 @@ async function submitSurvey(event) {
     const token = localStorage.getItem("jwtToken");
 
     // Send the collected responses to the backend via a POST request
-    const response = await fetch("http://form.jpran.in//api/survey/submit", {
+    const response = await fetch("http://form.jpran.in/api/survey/submit", {
         method: "POST",
         headers: {
             "Authorization": `Bearer ${token}`,
